@@ -1,0 +1,274 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#intro {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+  #introText {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px; /* Adjust size as needed */
+    color: #333; /* Dark gray for readability */
+    white-space: pre-line; /* Respects whitespace and line breaks in the text */
+    margin-bottom: 30px; /* Space between intro text and continue prompt */
+    text-align: center;
+    align-items: center;
+    width: 40%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    line-height: 150%;
+}
+
+#continuePrompt {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px; /* Adjust size as needed */
+    color: #333; /* Dark gray for readability */
+    white-space: pre-line; /* Respects whitespace and line breaks in the text */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 0%;
+}
+
+#continuePrompt:hover {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px; /* Adjust size as needed */
+    color: #000dff; /* Dark gray for readability */
+    white-space: pre-line; /* Respects whitespace and line breaks in the text */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7%;
+    margin-top: 0%;
+}
+
+#nametag {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px; /* Adjust size as needed */
+    color: #333; /* Dark gray for readability */
+    white-space: pre-line; /* Respects whitespace and line breaks in the text */
+    bottom: 5px;
+    text-align: center;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+#introText:after {
+    content: '|';
+    animation: blinkCursor 0.75s steps(1) infinite;
+    font-weight: bold;
+}
+
+@keyframes blinkCursor {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+#conversation {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out; /* Smooth transition for the opacity change */
+}
+
+.dialogue-side {
+    width: 50%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#crouwel {
+    background-image: url("/c.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+    background-size: cover;
+    color: white;
+    font-family: "Genos", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: large;
+  padding-right: 20%;
+  animation: slideIn 2s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Start off-screen to the left */
+        opacity: 0; /* Start faded out */
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+h3 {
+color: white;
+font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 140%;
+  margin-top: 3%
+}
+
+h5 {
+    color: rgb(0, 0, 0);
+    font-family: "Kdam Thmor Pro", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 130%;
+      margin: auto;
+    }
+
+#vantoorn {
+    background-image: url("/vt.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: scroll;
+    background-size: cover;
+    color: black;
+    font-family: "Gochi Hand", cursive;
+  font-style: normal;
+  font-size: large;
+    text-align: right;
+    padding-left: 20%;
+    animation: slideInR 2s ease-out forwards;
+}
+
+@keyframes slideInR {
+    from {
+        transform: translateX(100%); /* Start off-screen to the left */
+        opacity: 0; /* Start faded out */
+    }
+    to {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+h4 {
+    color: rgb(0, 0, 0);
+    font-family: "East Sea Dokdo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  font-size: 250%;
+  margin-top: 3%;
+  margin-bottom: 0
+
+}
+
+h6 {
+    color: rgb(0, 0, 0);
+    font-family: "East Sea Dokdo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  font-size: 250%;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+    .dialogue-side {
+        width: 100%;
+        height: 50%;
+    }
+} 
+
+.hidden {
+    display: none;
+}
+
+#poll {
+    width: 100%; /* Adjust this width as necessary */
+    padding: 20px;
+    max-height: max-content;
+    display: none; /* Start with poll hidden, assuming .hidden class does this */
+    flex-direction: column;
+    background: #fff; /* Optional: Background color for visibility */
+    border-radius: 10px; /* Optional: For aesthetics */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow for depth */
+    align-items: center;
+}
+
+label {
+    margin: auto ;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px; /* Adjust size as needed */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px; /* Adjust size as needed */
+    color: #333; /* Dark gray for readability */
+}
+
+#spacecont {
+    z-index: 999;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center; 
+    padding: 20px 0;
+    font-size: 20px;
+    color: white;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity change */
+}
+
+#pollForm input[type="radio"],
+#pollForm label {
+    display: inline-block;
+    vertical-align: middle; /* This helps align the text vertically in the middle */
+    margin-right: 15px; /* Adds some space to the right of each label */
+}
+
+#pollForm label {
+    margin-bottom: 0; /* If you have any bottom margin, set it to 0 */
+}

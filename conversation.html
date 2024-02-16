@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Theory Debate Interaction Core 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=East+Sea+Dokdo&family=Gemunu+Libre:wght@200..800&family=Genos:ital,wght@0,100..900;1,100..900&family=Gochi+Hand&family=Kdam+Thmor+Pro&family=Mansalva&family=Sedgwick+Ave&display=swap" rel="stylesheet">
+<link rel="icon" href="/debate favicon.png" type="image/png">
+<body>
+    <div id="conversation">
+        <div id="spacecont"><h1>PRESS SPACE TO CONTINUE.</h1></div>
+        <div id="crouwel" class="dialogue-side"><h3>WIM CROUWEL: SYSTEMATIC</h3></div>
+        <div id="vantoorn" class="dialogue-side"><h4>JAN VON TOORN: EXPRESSIVE</h4></div>
+    </div>
+    <div> <p id="nametag">BY HYNING GAN FOR INTERACTION LAB @PARSONSSCHOOLOFDESIGN W JAKE PHFAL</p></div>
+    </div>
+    <div id="poll" class="hidden">
+        <h1>WHO'S SIDE ARE YOU ON?</h1>
+        <form id="pollForm">
+            <input type="radio" id="Wim Crounwel" name="tag" value="Wim Crounwel">
+            <label for="modern"><h5>Wim Crounwel</h5></label><br>
+            <input type="radio" id="Jan von Toorn" name="tag" value="Jan von Toorn">
+            <label for="postmodern"><h6>Jan von Toorn</h6></label><br>
+            <input type="radio" id="Neither" name="tag" value="Neither">
+            <label for="swiss">Neither</label><br>
+            <button type="button" onclick="submitPoll()">SUBMIT</button>
+        </form>
+        <div id="pollResult"></div>
+    </div>
+    <script src="script2.js"></script>
+</body>
+</html>
