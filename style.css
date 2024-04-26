@@ -107,7 +107,7 @@ body {
 }
 
 #crouwel {
-    background-image: url("/c.png");
+    background-image: url("./c.png");
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: scroll;
@@ -151,7 +151,7 @@ h5 {
     }
 
 #vantoorn {
-    background-image: url("/vt.png");
+    background-image: url("./vt.png");
     background-repeat: no-repeat;
     background-position: right top;
     background-attachment: scroll;
